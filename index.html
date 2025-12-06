@@ -2242,7 +2242,7 @@
         padding: 40px 60px !important;
     }
 
-    /* ========== CAREER JOURNEY - ДЕСКТОП ========== */
+    /* ========== CAREER JOURNEY ========== */
     #experience::before,
     #experience::after,
     section#experience::before,
@@ -2283,7 +2283,7 @@
         flex: 0 0 350px !important;
     }
 
-    /* ========== FOOTER - ПРАВИЛЬНОЕ ВЫРАВНИВАНИЕ ========== */
+    /* ========== FOOTER ========== */
 
     .footer-section {
         display: flex !important;
@@ -2296,7 +2296,6 @@
         margin-bottom: 15px !important;
     }
 
-    /* SOCIAL LINKS - иконки в одну строку */
     .social-links {
         display: flex !important;
         flex-direction: row !important;
@@ -2306,12 +2305,11 @@
         gap: 15px !important;
     }
 
-    /* CONTACT INFO - выравнивание email и телефона */
     .contact-info {
         display: flex !important;
         flex-direction: column !important;
         gap: 12px !important;
-        align-items: flex-start !important;  /* выравнивание по левому краю */
+        align-items: flex-start !important;
     }
 
     .contact-item {
@@ -2321,12 +2319,43 @@
         width: 100% !important;
     }
 
-    /* Иконки одинаковой ширины для выравнивания */
     .contact-item i {
-        width: 20px !important;           /* фиксированная ширина */
+        width: 20px !important;
         min-width: 20px !important;
-        text-align: center !important;    /* иконка по центру */
+        text-align: center !important;
         display: inline-block !important;
+    }
+
+    /* ========== КЛИКАБЕЛЬНЫЕ КОНТАКТЫ ========== */
+
+    /* Ссылки для email и телефона */
+    .contact-link {
+        color: var(--text-dim) !important;
+        text-decoration: none !important;
+        transition: all 0.3s ease !important;
+        cursor: pointer !important;
+        padding: 4px 8px !important;
+        border-radius: 4px !important;
+        display: inline-block !important;
+    }
+
+    .contact-link:hover {
+        color: var(--grad-1) !important;
+        background: rgba(0, 212, 255, 0.1) !important;
+        transform: translateX(3px) !important;
+    }
+
+    .contact-link strong {
+        color: var(--text) !important;
+    }
+
+    /* Обычный текст (Location) */
+    .contact-text {
+        color: var(--text-dim) !important;
+    }
+
+    .contact-text strong {
+        color: var(--text) !important;
     }
 
     /* ========== МОБИЛЬНАЯ ВЕРСИЯ ========== */
@@ -2356,7 +2385,6 @@
             min-width: auto !important;
         }
 
-        /* На мобильных центрируем контакты */
         .contact-info {
             align-items: center !important;
         }
@@ -2951,11 +2979,11 @@
           <div class="contact-info">
             <div class="contact-item">
               <i class="fas fa-envelope" style="color: var(--grad-1);"></i>
-              <span><strong>Email:</strong><br>info@sergeyparshin.ru</span>
+              <a href="mailto:info@sergeyparshin.ru" class="contact-link"><strong>Email:</strong><br>info@sergeyparshin.ru</a>
             </div>
             <div class="contact-item">
               <i class="fas fa-phone" style="color: var(--grad-1);"></i>
-              <span><strong>Phone:</strong><br>+7 993 000-11-22</span>
+              <a href="tel:+7 993 000-11-22" class="contact-link"><strong>Phone:</strong><br>+7 993 000-11-22</a>
             </div>
           </div>
         </div>
